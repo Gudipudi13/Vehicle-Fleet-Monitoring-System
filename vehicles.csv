@@ -1,0 +1,21 @@
+id,speed,temperature,fuel
+Vehicle 1,120,130,15
+Vehicle 2,80,90,40
+Vehicle 3,0,85,50
+Vehicle 4,60,115,12
+Vehicle 5,100,105,20
+Vehicle 6,90,0,8
+Vehicle 7,70,80,60
+Vehicle 8,110,120,5
+Vehicle 9,50,95,15
+Vehicle 10,130,110,30
+Vehicle 11,100,110,15
+Vehicle 12,100,109.9,15.1
+Vehicle 13,100,110,14.9
+Vehicle 14,100,110.1,15
+Vehicle 15,100,110,14
+Vehicle 16,100,110,16
+Vehicle 17,100,110,0
+Vehicle 18,100,110,100
+Vehicle 19,100,0,0
+Vehicle 20,0,110,0
