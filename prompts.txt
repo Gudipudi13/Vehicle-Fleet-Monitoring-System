@@ -1,0 +1,82 @@
+Prompt 1 :
+
+Build a Python project using OOP across three separate files:
+vehicle.py: Define a Vehicle class with id, speed, temperature, and fuel.
+fleet_manager.py: Define a FleetManager class that manages a list of Vehicles, calculates average speed/temperature/fuel, and prints alerts:
+If temperature > 110°C → “Critical Overheating”
+If fuel < 15% → “Low Fuel Warning”
+main.py: Read vehicle data from a CSV file (with headers), create Vehicle instances, and display results using FleetManager.
+Requirements:
+Use constants for thresholds
+Use exception handling for empty or invalid CSV
+Follow clean coding principles and separation of concerns
+Sample CSV:
+id,speed,temperature,fuel
+V1,120,130,10
+V2,80,90,40
+V3,0,85,50
+
+Prompt 2:
+
+Debug my multi-file Python project that monitors vehicle data.
+Project structure:
+- vehicle.py → Defines a Vehicle class with id, speed, temperature, fuel. Currently only validates id and fuel (0–100), but not speed or temperature.
+- fleet_manager.py → Contains FleetManager, which:
+- Computes average speed, temperature, fuel
+- Generates alerts:
+- If temperature > 110 → "Critical Overheating"
+- If fuel < 15 → "Low Fuel Warning"
+- main.py → Loads vehicle data from CSV and prints summary and alerts.
+Problems I want fixed:
+1.    Alerts don’t trigger for threshold edge values for example for temperature =110, fuel =15 make this behavior configurable and adjust logic if needed.
+2.    No validation for negative or unrealistic speed and temperature in Vehicle class.
+3.    If one row in the CSV is invalid, the entire program crashes , I want bad rows to be skipped with a warning instead.
+4.    Ensure average calculations and alerts are correct even after skipping bad rows.
+Keep the structure and OOP design intact. Make the code robust and beginner-friendly.
+
+Prompt 3:
+
+Refactor the following Messy Python code in main.py into a clean, modular, object-oriented design using best practices:
+
+speed = [120, 80, 0]
+temp = [130, 90, 85]
+fuel = [10, 40, 50]
+for i in range(3):
+print(f"Vehicle {i} Speed:{speed[i]} Temp:{temp[i]} Fuel:{fuel[i]}")
+if temp[i] > 110:
+print("Alert")
+if fuel[i] < 15:
+print("Warning")
+Create a Vehicle class with attributes: id, speed, temperature, and fuel.
+Create a FleetManager class to manage a list of Vehicle objects, compute averages, and trigger alerts.
+Use constants for thresholds (MAX_TEMP = 110, MIN_FUEL = 15).
+Load vehicle data from a CSV file using the csv module.
+Add input validation and exception handling for malformed/empty CSV files.
+Organize code into separate files: vehicle.py, fleet_manager.py, and main.py.
+
+Prompt 4 : 
+
+Write unit and integration tests using Python’s unittest module for my Vehicle Fleet Management system.
+The system includes:
+- Vehicle class (attributes: id, speed, temperature, fuel)
+- FleetManager class (manages a list of vehicles, computes averages, triggers alerts)
+Implement the following test cases:
+Unit Tests:
+1. Vehicle with temperature = 120 - > should trigger "Critical Overheating".
+2. Vehicle with fuel = 10 -> should trigger "Low Fuel Warning".
+3. Vehicle with temperature = 110 - >should NOT trigger "Critical Overheating".
+4. Vehicle with fuel = 15 - > should NOT trigger "Low Fuel Warning".
+Integration Test:
+- A fleet with speeds [80, 90, 100] - > average speed should be 90.
+Error Handling:
+- Empty vehicle list passed to FleetManager - > should raise an exception.
+Use proper setup methods and assert statements in the tests.
+
+Prompt 5:
+
+Generate a README file for my python project which include:
+Introduction : Brief the overview of the project: a fleet monitoring system that analyzes speed, temperature, and fuel data for multiple vehicles using OOP, file handling, and exception management.
+System Requirements : List dependencies like Python version, VS Code, and unittest.
+Explanation of Classes and Functions : Describe the Vehicle and FleetManager classes, key constants like MAX_TEMP and MIN_FUEL, and important methods like reading from CSV, calculating averages, and generating alerts.
+Sample Input and Output : Show a small sample of input data CSV and expected printed output including average calculations and warnings.
+Format the README properly with markdown syntax using headings, bullet points, and code blocks where needed.
